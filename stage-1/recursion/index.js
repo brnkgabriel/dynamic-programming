@@ -154,3 +154,18 @@ const combination = (n, r) => {
 console.log(combination(12,4))
 console.log(permutation(12,4))
 console.log(permutation(11,4))
+
+
+const recurseFind = (str, target) => {
+  if (str.length === 0) return false
+  if (str.val === target) return true
+  return recurseFind(str.next, a)
+}
+
+const recurseMerge = (str, target) => {
+  if (str.length === 0) return ""
+
+  const idx = str.indexOf(str)
+
+  return recurseMerge(str.substring(0, str.length - 1), target) + "," str[idx]
+}
