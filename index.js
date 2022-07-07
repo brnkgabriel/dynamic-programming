@@ -4,6 +4,7 @@ function appendAndDelete(s, t, k) {
   let tSplit = t.split("")
   let toAdd = []
   let beginCollation = false
+
   for (let i = 0; i <= k; i++) {
     const bIdx = (k - 1) - i
 
@@ -56,5 +57,27 @@ function appendAndDelete(s, t, k) {
 
 // console.log(appendAndDelete("aba", "aba", 7))
 // console.log(appendAndDelete("ashley", "ash", 2))
-console.log(appendAndDelete("hackerhappy", "hackerrank", 9))
+// console.log(appendAndDelete("hackerhappy", "hackerrank", 9))
 // console.log(appendAndDelete("abc", "def", 6))
+
+function divisibleSumPairs(n, k, ar) {
+  // Write your code here
+  const pairs = [], memo = {}
+  for (let i = 0; i < ar.length; i++) {
+    const aPair = ar[i]
+    for (let j = i + 1; j < ar.length; j++) {
+      const bPair = ar[j]
+      const modulo = (aPair + bPair) % k
+      if (modulo === 0) {
+        const sorted = [aPair, bPair].sort((a, b) => a - b)
+        // const str = sorted.join(",")
+        // if (str in memo) continue
+        // memo[str] = pairs.push(sorted)
+        pairs.push(sorted)
+      }
+    }
+  }
+  return pairs.length
+}
+
+console.log(divisibleSumPairs(6, 3, [1, 3, 2, 6, 1, 2]))
