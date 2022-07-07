@@ -1,0 +1,25 @@
+Alvin's memoization recipe
+--------------------------
+
+1. Stick to 2 high level steps.
+   - make it work: look for correctness. 
+      - Visualize the problem as a tree. Break down a large problem into smaller instances of the same    
+        problem
+      - Figure out, in the node of a tree it should represent a problem. When I draw an edge btw node, it 
+        should be shrinking the size of the problem.
+      - Implement the tree using recursion. The tree is already a recursive structure. Think about the 
+        leaves of your tree as the base case.
+      - Once your have your baseline recursion, that will be your brute force solution.
+      - Test it. If you pass inputs to your solution, it should give correct answers. For large inputs, 
+        it could take a long time. There is a big difference between code that is slow, and code that is wrong.
+   - make it efficient: look for efficiency
+      - start by adding a memo object into the mix. It needs to have keys, which represent arguments to 
+        our function. And the value of that object should represent return values for those function calls. We know that in our function a unique set of arguments should give me particular results
+      - make sure the object is shared among your recursive calls. One way to do that is to pass them 
+        along as arguments.
+      - add a new base case to return memo values. That captures the memo. If my arguments are in the 
+        memo as key, I'll return the stored value.
+      - implement our memo storing logic. It's as simple as going to exactly where we had our return 
+        values in our function, and we make sure we add those return values to our object, before returning the memo object.
+        
+
