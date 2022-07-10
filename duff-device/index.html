@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Duff's Device</title>
+  </head>
+  <body>
+    <div class="-container">
+      <h2>Duff's Device</h2>
+
+      <p id="results">
+        Results: Duff's Device performed <span id="percent">x%</span>
+        <span class="result">faster</span> than the for-loop during this test.
+      </p>
+
+      <p id="insert"></p>
+
+      <table>
+        <tr class="top">
+          <th class="l" style="width: 90px">Array<br />Size</th>
+          <th class="l" style="width: 45px">Test</th>
+          <th class="r" style="width: 90px">Without <small>(ms)</small></th>
+          <th class="r" style="width: 70px">With <small>(ms)</small></th>
+          <th class="r" style="width: 125px">Improvement <small>(%)</small></th>
+        </tr>
+        <tr class="spacer"></tr>
+        <tr class="top">
+          <td class="l">4,000</td>
+          <td class="l">1</td>
+          <td class="r">x</td>
+          <td class="r">x</td>
+          <td class="r">xx%</td>
+        </tr>
+        <tr>
+          <td class="l"></td>
+          <td class="l">2</td>
+          <td class="r">x</td>
+          <td class="r">x</td>
+          <td class="r">xx%</td>
+        </tr>
+        <tr>
+          <td class="l"></td>
+          <td class="l">3</td>
+          <td class="r">x</td>
+          <td class="r">x</td>
+          <td class="r">xx%</td>
+        </tr>
+        <tr class="average">
+          <td class="l"></td>
+          <td class="l">μ</td>
+          <td class="r">x</td>
+          <td class="r">x</td>
+          <td class="r">xx%</td>
+        </tr>
+        <tr class="spacer"></tr>
+        <tr id="tr_2k1" class="top"></tr>
+        <tr>
+          <td class="l"></td>
+          <td class="l">2</td>
+          <td class="r">x</td>
+          <td class="r">x</td>
+          <td class="r">xx%</td>
+        </tr>
+        <tr>
+          <td class="l"></td>
+          <td class="l">3</td>
+          <td class="r">x</td>
+          <td class="r">x</td>
+          <td class="r">xx%</td>
+        </tr>
+        <tr class="average">
+          <td class="l"></td>
+          <td class="l">μ</td>
+          <td class="r">x</td>
+          <td class="r">x</td>
+          <td class="r">xx%</td>
+        </tr>
+        <tr class="spacer"></tr>
+        <tr class="top">
+          <td class="l">100,000</td>
+          <td class="l">1</td>
+          <td class="r">xx</td>
+          <td class="r">xx</td>
+          <td class="r">xx%</td>
+        </tr>
+        <tr>
+          <td class="l"></td>
+          <td class="l">2</td>
+          <td class="r">xx</td>
+          <td class="r">xx</td>
+          <td class="r">xx%</td>
+        </tr>
+        <tr>
+          <td class="l"></td>
+          <td class="l">3</td>
+          <td class="r">xx</td>
+          <td class="r">xx</td>
+          <td class="r">xx%</td>
+        </tr>
+        <tr class="average">
+          <td class="l"></td>
+          <td class="l">μ</td>
+          <td class="r">xx</td>
+          <td class="r">xx</td>
+          <td class="r">xx%</td>
+        </tr>
+      </table>
+
+      <p class="footer">
+        This technique is called loop unrolling, or loop unwinding. See js tab
+        to see how it works.
+      </p>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

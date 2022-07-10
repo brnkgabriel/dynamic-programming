@@ -1,0 +1,67 @@
+#results, #insert, .footer {
+  font-family: "Work Sans", Sans-Serif;  
+}
+#percent {
+  font-weight: bold;
+}
+.result {
+  color: #00b200;
+  font-weight: bold;
+}
+.x1 {
+  font-family: monospace;
+  font-size: 1.2em;
+}
+h2 {
+  font-family: sans-serif;
+  font-variant: small-caps;
+}
+
+table tr#tr_2k1 td {
+  font-weight: bolder !important;
+  color: #00b200;
+}
+
+/* table */
+table, td, th {    
+  font-weight: 400;
+}
+
+table {
+  /*margin: 0 auto;*/
+  border-collapse: collapse;
+  width: auto;
+  font-family: "Work Sans", "Open Sans", sans-serif;
+  font-size: 0.9em;
+}
+
+th {
+  padding: 0px;
+  vertical-align: bottom;
+}
+tr th {
+  border-bottom: 1px solid #ddd;
+}
+
+th.l, td.l {
+  text-align: left;
+}
+th.r, td.r  {
+  text-align: right;
+}
+tr.top>td, tr.top>th {
+  padding-top: 12px;
+}
+table tr:hover{
+  background: #eeffee;
+}
+tr.average {
+  font-size: 0.9em;
+  color: #555; 
+}
+
+table tr.spacer {
+  width: 100%;
+  height: 10px;
+}
+/*/table */
